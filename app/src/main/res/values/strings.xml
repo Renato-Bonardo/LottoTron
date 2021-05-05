@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">LottoTron</string>
+    <string name="text_title">Lotto App</string>
+    <string name="text_make_game">Faça seu jogo:</string>
+    <string name="text_input_num1">num1</string>
+    <string name="text_input_num2">num2</string>
+    <string name="text_input_num3">num3</string>
+    <string name="text_input_num4">num4</string>
+    <string name="text_input_num5">num5</string>
+    <string name="text_extraction">Extração :</string>
+    <string name="text_extract">num1</string>
+    <string name="text_extract1">num2</string>
+    <string name="text_extract2">num3</string>
+    <string name="text_extract3">num4</string>
+    <string name="text_extract4">num5</string>
+    <string name="text_result">Resultado :</string>
+    <string name="text_percent">- X acertos</string>
+    <string name="button_draw">Sorteio</string>
+    <string name="img_ball">Bola 1</string>
+    <string name="img_ball1">Bola 2</string>
+    <string name="img_ball2">Bola 3</string>
+    <string name="img_ball3">Bola 4</string>
+    <string name="img_ball4">Bola 5</string>
+    <string name="ball_extract">num1</string>
+    <string name="ball_extract1">num2</string>
+    <string name="ball_extract2">num3</string>
+    <string name="ball_extract3">num4</string>
+    <string name="ball_extract4">num5</string>
+
 </resources>
