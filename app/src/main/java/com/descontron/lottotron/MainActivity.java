@@ -71,7 +71,8 @@ public class MainActivity extends AppCompatActivity {
         btnDraw.setOnClickListener(new View.OnClickListener() {
 
             private Random rnd = new Random();
-            private List<Integer> numberDraw = new ArrayList<>();
+            int numberDraw;
+            private List<Integer> numbersDraw = new ArrayList<>();
             int count = 0;
 
 
@@ -79,13 +80,26 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 while(count< numOfNumbers){
+                    numberDraw = rnd.nextInt(50)+1;
 
-                    for(int i=0; i< numOfNumbers; i++) {
-                        Log.i("RND", "Randon value" + i + " -> " + + (rnd.nextInt(50) + 1));
+                    if(!numbersDraw.contains(numberDraw)){
+
+                        numbersDraw.add(numberDraw);
                         count++;
+                        Log.i("TAG", "Contador -> " + count);
                     }
 
+
+
+
                 }
+
+
+                    textExtract.setText(numbersDraw.get(0).toString());
+                    textExtract1.setText(numbersDraw.get(1).toString());
+                    textExtract2.setText(numbersDraw.get(2).toString());
+                    textExtract3.setText(numbersDraw.get(3).toString());
+                    textExtract4.setText(numbersDraw.get(4).toString());
 
 
 
