@@ -10,36 +10,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
-    private TextView textExtract;
-    private TextView textExtract1;
-    private TextView textExtract2;
-    private TextView textExtract3;
-    private TextView textExtract4;
+    private TextView[] textExtract;
 
-    private ImageView ballExtract;
-    private ImageView ballExtract1;
-    private ImageView ballExtract2;
-    private ImageView ballExtract3;
-    private ImageView ballExtract4;
+    private ImageView[] ballExtract;
 
-    private final int[] textOutput = new int[]{
-            R.id.text_extract,
-            R.id.text_extract1,
-            R.id.text_extract2,
-            R.id.text_extract3,
-            R.id.text_extract4};
-
-    private final int[] ballOutput = new int[]{
-            R.id.ball_extract,
-            R.id.ball_extract1,
-            R.id.ball_extract2,
-            R.id.ball_extract3,
-            R.id.ball_extract4};
 
     private Button btnDraw;
 
@@ -51,20 +31,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        textExtract = new TextView[]{
+                findViewById(R.id.text_extract),
+                findViewById(R.id.text_extract1),
+                findViewById(R.id.text_extract2),
+                findViewById(R.id.text_extract3),
+                findViewById(R.id.text_extract4)};
+
         btnDraw = findViewById(R.id.button_draw);
 
-        textExtract = findViewById(R.id.text_extract);
-        textExtract1 = findViewById(R.id.text_extract1);
-        textExtract2 = findViewById(R.id.text_extract2);
-        textExtract3 = findViewById(R.id.text_extract3);
-        textExtract4 = findViewById(R.id.text_extract4);
-
-        ballExtract = findViewById(R.id.ball_extract);
-        ballExtract1 = findViewById(R.id.ball_extract1);
-        ballExtract2 = findViewById(R.id.ball_extract2);
-        ballExtract3 = findViewById(R.id.ball_extract3);
-        ballExtract4 = findViewById(R.id.ball_extract4);
-
+        ballExtract = new ImageView[]{
+                findViewById(R.id.ball_extract),
+                findViewById(R.id.ball_extract1),
+                findViewById(R.id.ball_extract2),
+                findViewById(R.id.ball_extract3),
+                findViewById(R.id.ball_extract4)
+        };
 
 
 
@@ -83,23 +65,21 @@ public class MainActivity extends AppCompatActivity {
                     numberDraw = rnd.nextInt(50)+1;
 
                     if(!numbersDraw.contains(numberDraw)){
-
                         numbersDraw.add(numberDraw);
                         count++;
-                        Log.i("TAG", "Contador -> " + count);
                     }
+                }
 
+                Collections.sort(numbersDraw);
+
+                for(int i=0; i < numOfNumbers; i++) {
+                    textExtract[i].setText(numbersDraw.get(i).toString());
+                    textExtract[i].setVisibility(View.VISIBLE);
+                    ballExtract[i].setVisibility(View.VISIBLE);
 
 
 
                 }
-
-
-                    textExtract.setText(numbersDraw.get(0).toString());
-                    textExtract1.setText(numbersDraw.get(1).toString());
-                    textExtract2.setText(numbersDraw.get(2).toString());
-                    textExtract3.setText(numbersDraw.get(3).toString());
-                    textExtract4.setText(numbersDraw.get(4).toString());
 
 
 
