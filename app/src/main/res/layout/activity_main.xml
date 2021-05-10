@@ -104,6 +104,7 @@
 
     <TextView
         android:id="@+id/text_percent"
+        android:visibility="invisible"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -321,6 +322,7 @@
 
     <ImageView
         android:id="@+id/ball_extract"
+        android:visibility="invisible"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:paddingStart="10dp"
@@ -336,6 +338,7 @@
 
     <ImageView
         android:id="@+id/ball_extract1"
+        android:visibility="invisible"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:paddingStart="10dp"
@@ -351,6 +354,7 @@
 
     <ImageView
         android:id="@+id/ball_extract2"
+        android:visibility="invisible"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:paddingStart="10dp"
@@ -366,6 +370,7 @@
 
     <ImageView
         android:id="@+id/ball_extract3"
+        android:visibility="invisible"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:paddingStart="10dp"
@@ -381,6 +386,7 @@
 
     <ImageView
         android:id="@+id/ball_extract4"
+        android:visibility="invisible"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:paddingStart="10dp"
@@ -396,6 +402,7 @@
 
     <TextView
         android:id="@+id/text_extract"
+        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -416,6 +423,7 @@
 
     <TextView
         android:id="@+id/text_extract1"
+        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -436,6 +444,7 @@
 
     <TextView
         android:id="@+id/text_extract2"
+        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -456,6 +465,7 @@
 
     <TextView
         android:id="@+id/text_extract3"
+        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -476,6 +486,7 @@
 
     <TextView
         android:id="@+id/text_extract4"
+        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
