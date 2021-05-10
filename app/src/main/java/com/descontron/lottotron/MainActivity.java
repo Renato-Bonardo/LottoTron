@@ -77,8 +77,6 @@ public class MainActivity extends AppCompatActivity  {
                     textExtract[i].setVisibility(View.VISIBLE);
                     ballExtract[i].setVisibility(View.VISIBLE);
 
-
-
                 }
 
 
