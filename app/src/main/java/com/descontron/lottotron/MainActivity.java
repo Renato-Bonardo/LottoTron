@@ -146,15 +146,16 @@ public class MainActivity extends AppCompatActivity {
                                 if ((nums.get(3) != nums.get(4))) {
 
                                     // POnto onde todas as validações estao ok e o sorteio pode ser feito
-                                    // Numeros escolhidos sao: n1, n2, n3, n4, n5
+                                    
 
                                     Toast toast = Toast.makeText(contexto, "Numeros diferentes, ok !", 30);
                                     Edt5.setTextColor(Color.BLACK);
                                     toast.show();
 
                                     while(count< numOfNumbers){
-                                        //numberDraw = rnd.nextInt(50)+1;
-                                        numberDraw = count+1;
+                                        numberDraw = rnd.nextInt(50)+1;
+                                        //Para testar acertar todos os número comentar a linha acima e descomentar a linha abaixo
+                                        //numberDraw = count+1;
 
                                         if(!numbersDraw.contains(numberDraw)){
                                             numbersDraw.add(numberDraw);
@@ -206,8 +207,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast toast = Toast.makeText(contexto, "Por favor, preencha todos os campos", 30);
                 toast.show();
             }
-
-
         }
     };
     private View.OnClickListener resetSorteio = new View.OnClickListener() {
@@ -238,23 +237,20 @@ public class MainActivity extends AppCompatActivity {
 
     private void showVencedor(){
 
-
         View view = getLayoutInflater().inflate(R.layout.alert, null);
         AlertDialog alertDialog;
-
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(view);
         builder.setCancelable(false);
         alertDialog = builder.create();
         alertDialog.show();
 
-
         view.findViewById(R.id.img_vencedor).setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
-                audioAplausos.pause();
 
+                audioAplausos.pause();
                 alertDialog.dismiss();
 
             }
