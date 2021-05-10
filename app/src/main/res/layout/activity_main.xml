@@ -115,7 +115,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_result"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.05"/>
 
     <ImageView
         android:id="@+id/img_ball"
@@ -130,7 +130,7 @@
         app:layout_constraintEnd_toStartOf="@+id/img_ball1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_make_game"
-        app:srcCompat="@drawable/bola" />/>
+        app:srcCompat="@drawable/bola" />
 
     <ImageView
         android:id="@+id/img_ball1"
@@ -145,7 +145,7 @@
         app:layout_constraintEnd_toStartOf="@+id/img_ball2"
         app:layout_constraintStart_toEndOf="@+id/img_ball"
         app:layout_constraintTop_toBottomOf="@+id/text_make_game"
-        app:srcCompat="@drawable/bola" />
+        app:srcCompat="@drawable/bola"/>
 
     <ImageView
         android:id="@+id/img_ball2"
@@ -184,7 +184,6 @@
         android:paddingStart="10dp"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
-
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/button_draw"
@@ -197,10 +196,6 @@
         android:id="@+id/text_input_num1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
         android:background="@null"
         android:digits="1234567890"
         android:ems="3"
@@ -210,21 +205,16 @@
         android:paddingBottom="10dp"
         android:text=""
         android:textAlignment="center"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_draw"
-        app:layout_constraintEnd_toStartOf="@+id/text_input_num2"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_ball"
+        app:layout_constraintEnd_toEndOf="@+id/img_ball"
         app:layout_constraintStart_toStartOf="@+id/img_ball"
-        app:layout_constraintTop_toBottomOf="@+id/text_make_game" />
+        app:layout_constraintTop_toTopOf="@+id/img_ball" />
 
     <EditText
         android:id="@+id/text_input_num2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
         android:background="@null"
         android:digits="1234567890"
         android:ems="3"
@@ -234,21 +224,16 @@
         android:paddingBottom="10dp"
         android:text=""
         android:textAlignment="center"
-        android:textSize="20dp"
-
-        app:layout_constraintBottom_toTopOf="@+id/button_draw"
-        app:layout_constraintEnd_toStartOf="@+id/text_input_num3"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_ball1"
+        app:layout_constraintEnd_toEndOf="@+id/img_ball1"
         app:layout_constraintStart_toStartOf="@+id/img_ball1"
-        app:layout_constraintTop_toBottomOf="@+id/text_make_game" />
+        app:layout_constraintTop_toTopOf="@+id/img_ball1" />
 
     <EditText
         android:id="@+id/text_input_num3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
         android:background="@null"
         android:digits="1234567890"
         android:ems="3"
@@ -258,21 +243,16 @@
         android:paddingBottom="10dp"
         android:text=""
         android:textAlignment="center"
-        android:textSize="20dp"
-
-        app:layout_constraintBottom_toTopOf="@+id/button_draw"
-        app:layout_constraintEnd_toStartOf="@+id/text_input_num4"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_ball2"
+        app:layout_constraintEnd_toEndOf="@+id/img_ball2"
         app:layout_constraintStart_toStartOf="@+id/img_ball2"
-        app:layout_constraintTop_toBottomOf="@+id/text_make_game" />
+        app:layout_constraintTop_toTopOf="@+id/img_ball2" />
 
     <EditText
         android:id="@+id/text_input_num4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
         android:background="@null"
         android:digits="1234567890"
         android:ems="3"
@@ -282,23 +262,16 @@
         android:paddingBottom="10dp"
         android:text=""
         android:textAlignment="center"
-        android:textSize="20dp"
-
-        app:layout_constraintBottom_toTopOf="@+id/button_draw"
-        app:layout_constraintEnd_toStartOf="@+id/text_input_num5"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_ball3"
+        app:layout_constraintEnd_toEndOf="@+id/img_ball3"
         app:layout_constraintStart_toStartOf="@+id/img_ball3"
-        app:layout_constraintTop_toBottomOf="@+id/text_make_game" />
+        app:layout_constraintTop_toTopOf="@+id/img_ball3" />
 
     <EditText
         android:id="@+id/text_input_num5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="5dp"
         android:background="@null"
         android:digits="1234567890"
         android:ems="3"
@@ -308,12 +281,11 @@
         android:paddingBottom="10dp"
         android:text=""
         android:textAlignment="center"
-        android:textSize="20dp"
-
-        app:layout_constraintBottom_toTopOf="@+id/button_draw"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/text_input_num4"
-        app:layout_constraintTop_toBottomOf="@+id/text_make_game" />
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_ball4"
+        app:layout_constraintEnd_toEndOf="@+id/img_ball4"
+        app:layout_constraintStart_toStartOf="@+id/img_ball4"
+        app:layout_constraintTop_toTopOf="@+id/img_ball4" />
 
     <ImageView
         android:id="@+id/ball_extract"
@@ -377,7 +349,7 @@
         app:layout_constraintEnd_toEndOf="@id/ball_extract4"
         app:layout_constraintStart_toEndOf="@+id/ball_extract2"
         app:layout_constraintTop_toBottomOf="@+id/text_extraction"
-        app:srcCompat="@drawable/bola" />
+        app:srcCompat="@drawable/bola"/>
 
     <ImageView
         android:id="@+id/ball_extract4"
@@ -397,107 +369,87 @@
 
     <TextView
         android:id="@+id/text_extract"
-        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:gravity="center_horizontal"
         android:text="Num1"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/text_result"
-        app:layout_constraintEnd_toStartOf="@+id/text_extract1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_extraction" />
+        app:layout_constraintEnd_toEndOf="@+id/ball_extract"
+        app:layout_constraintStart_toStartOf="@+id/ball_extract"
+        app:layout_constraintTop_toBottomOf="@+id/text_extraction"/>
 
     <TextView
         android:id="@+id/text_extract1"
-        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:gravity="center_horizontal"
         android:text="Num2"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/text_result"
-        app:layout_constraintEnd_toStartOf="@+id/text_extract2"
-        app:layout_constraintStart_toEndOf="@+id/text_extract"
-        app:layout_constraintTop_toBottomOf="@+id/text_extraction" />
+        app:layout_constraintEnd_toEndOf="@+id/ball_extract1"
+        app:layout_constraintStart_toStartOf="@+id/ball_extract1"
+        app:layout_constraintTop_toBottomOf="@+id/text_extraction"/>
 
     <TextView
         android:id="@+id/text_extract2"
-        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:gravity="center_horizontal"
         android:text="Num3"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/text_result"
-        app:layout_constraintEnd_toStartOf="@+id/text_extract3"
-        app:layout_constraintStart_toEndOf="@+id/text_extract1"
-        app:layout_constraintTop_toBottomOf="@+id/text_extraction" />
+        app:layout_constraintEnd_toEndOf="@+id/ball_extract2"
+        app:layout_constraintStart_toStartOf="@+id/ball_extract2"
+        app:layout_constraintTop_toBottomOf="@+id/text_extraction"/>
 
     <TextView
         android:id="@+id/text_extract3"
-        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:gravity="center_horizontal"
         android:text="Num4"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/text_result"
-        app:layout_constraintEnd_toStartOf="@+id/text_extract4"
-        app:layout_constraintStart_toEndOf="@+id/text_extract2"
-        app:layout_constraintTop_toBottomOf="@+id/text_extraction" />
+        app:layout_constraintEnd_toEndOf="@+id/ball_extract3"
+        app:layout_constraintStart_toStartOf="@+id/ball_extract3"
+        app:layout_constraintTop_toBottomOf="@+id/text_extraction"/>
 
     <TextView
         android:id="@+id/text_extract4"
-        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:gravity="center_horizontal"
         android:text="Num5"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/text_result"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/text_extract3"
+        app:layout_constraintEnd_toEndOf="@+id/ball_extract4"
+        app:layout_constraintStart_toStartOf="@+id/ball_extract4"
         app:layout_constraintTop_toBottomOf="@+id/text_extraction" />
 
 
