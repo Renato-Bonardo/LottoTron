@@ -130,7 +130,7 @@
         app:layout_constraintEnd_toStartOf="@+id/img_ball1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_make_game"
-        app:srcCompat="@drawable/bola" />
+        app:srcCompat="@drawable/bola"/>
 
     <ImageView
         android:id="@+id/img_ball1"
@@ -196,6 +196,7 @@
         android:id="@+id/text_input_num1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="@null"
         android:digits="1234567890"
         android:ems="3"
@@ -215,6 +216,7 @@
         android:id="@+id/text_input_num2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="@null"
         android:digits="1234567890"
         android:ems="3"
@@ -234,6 +236,7 @@
         android:id="@+id/text_input_num3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="@null"
         android:digits="1234567890"
         android:ems="3"
@@ -253,6 +256,7 @@
         android:id="@+id/text_input_num4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="@null"
         android:digits="1234567890"
         android:ems="3"
@@ -272,6 +276,7 @@
         android:id="@+id/text_input_num5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="@null"
         android:digits="1234567890"
         android:ems="3"
