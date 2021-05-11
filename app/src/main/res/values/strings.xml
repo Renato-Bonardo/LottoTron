@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">LottoTron</string>
     <string name="text_title">Lotto App</string>
-    <string name="text_make_game">Faça seu jogo:</string>
+    <string name="text_make_game">Faça seu jogo :</string>
     <string name="text_input_num1">num1</string>
     <string name="text_input_num2">num2</string>
     <string name="text_input_num3">num3</string>

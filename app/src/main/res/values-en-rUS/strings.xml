@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LottoTron</string>
+    <string name="text_title">App Lotto</string>
+    <string name="text_make_game">Make your gambling:</string>
+    <string name="text_input_num1">number1</string>
+    <string name="text_input_num2">number2</string>
+    <string name="text_input_num3">number3</string>
+    <string name="text_input_num4">number4</string>
+    <string name="text_input_num5">number5</string>
+    <string name="text_extraction">Extraction :</string>
+    <string name="text_extract">number1</string>
+    <string name="text_extract1">number2</string>
+    <string name="text_extract2">number3</string>
+    <string name="text_extract3">number4</string>
+    <string name="text_extract4">number5</string>
+    <string name="text_result">Result :</string>
+    <string name="text_percent">- X hits</string>
+    <string name="button_draw">Raffle</string>
+    <string name="img_ball">ball1</string>
+    <string name="img_ball1">ball2</string>
+    <string name="img_ball2">ball3</string>
+    <string name="img_ball3">ball4</string>
+    <string name="img_ball4">ball5</string>
+    <string name="ball_extract">number1</string>
+    <string name="ball_extract1">number2</string>
+    <string name="ball_extract2">number3</string>
+    <string name="ball_extract3">number4</string>
+    <string name="ball_extract4">number5</string>
+</resources>
