@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            btnSorteio.setEnabled(false);
+
             List<Integer> nums = new ArrayList<>();
             if ((! Edt1.getText().toString().equals("")) && (! Edt2.getText().toString().equals("")) && (! Edt3.getText().toString().equals("")) && (! Edt4.getText().toString().equals("")) && (! Edt5.getText().toString().equals(""))) {
                 nums.add(Integer.parseInt(Edt1.getText().toString()));
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
                                 if ((nums.get(3) != nums.get(4))) {
 
                                     // Ponto onde todas as validações estao ok e o sorteio pode ser feito
-
+                                    btnSorteio.setEnabled(false);
 
                                     while(count< numOfNumbers){
                                         numberDraw = rnd.nextInt(50)+1;
