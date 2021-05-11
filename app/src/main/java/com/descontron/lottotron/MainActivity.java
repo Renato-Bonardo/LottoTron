@@ -39,12 +39,16 @@ public class MainActivity extends AppCompatActivity {
     int numOfNumbers = 5;
 
 
-    public void validaCorreto(int n, Context ct) {
+    public void validaCorreto(int n,EditText edt, Context ct) {
         if ((n == 0) || (n > 50)) {
             Toast toast = Toast.makeText(ct, "Digite valores entre 1 e 50", 30);
             toast.show();
+            edt.setTextColor(Color.parseColor("#FF0000"));
+
+        }else{
+            edt.setTextColor(Color.parseColor("#000000"));
         }
-    }
+}
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                   if ((!hasFocus) && (! Edt1.getText().toString().equals(""))) {
                       int numero1;
                       numero1 = Integer.parseInt(Edt1.getText().toString());
-                      validaCorreto(numero1,contexto);
+                      validaCorreto(numero1,Edt1, contexto);
                   }
               }
           });
@@ -87,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 if ((!hasFocus) && (! Edt2.getText().toString().equals(""))) {
                     int numero2;
                     numero2 = Integer.parseInt(Edt2.getText().toString());
-                    validaCorreto(numero2,contexto);
+                    validaCorreto(numero2,Edt2, contexto);
                 }
             }
           });
@@ -96,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 if ((!hasFocus) && (! Edt3.getText().toString().equals(""))) {
                     int numero3;
                     numero3 = Integer.parseInt(Edt3.getText().toString());
-                    validaCorreto(numero3,contexto);
+                    validaCorreto(numero3,Edt3, contexto);
                 }
             }
         });
@@ -105,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 if ((!hasFocus) && (! Edt4.getText().toString().equals(""))) {
                     int numero4;
                     numero4 = Integer.parseInt(Edt4.getText().toString());
-                    validaCorreto(numero4,contexto);
+                    validaCorreto(numero4,Edt4,contexto);
                 }
             }
         });
@@ -114,7 +118,8 @@ public class MainActivity extends AppCompatActivity {
                 if ((!hasFocus) && (! Edt5.getText().toString().equals(""))) {
                     int numero5;
                     numero5 = Integer.parseInt(Edt5.getText().toString());
-                    validaCorreto(numero5,contexto);
+                    validaCorreto(numero5,Edt5, contexto);
+
                 }
             }
         });
@@ -216,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
             for(int i=0; i < numOfNumbers; i++) {
 
                 textExtract[i].setVisibility(View.INVISIBLE);
-                textExtract[i].setTextColor(Color.parseColor("#FF000000"));
+                textExtract[i].setTextColor(Color.parseColor("#56000000"));
                 ballExtract[i].setVisibility(View.INVISIBLE);
             }
 
