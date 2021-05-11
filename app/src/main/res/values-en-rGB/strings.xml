@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">LottoTron</string>
     <string name="text_title">App Lotto</string>
-    <string name="text_make_game">Make your gambling:</string>
+    <string name="text_make_game">Make your gabling :</string>
     <string name="text_input_num1">number1</string>
     <string name="text_input_num2">number2</string>
     <string name="text_input_num3">number3</string>
@@ -27,4 +27,5 @@
     <string name="ball_extract2">number3</string>
     <string name="ball_extract3">number4</string>
     <string name="ball_extract4">number5</string>
+
 </resources>
