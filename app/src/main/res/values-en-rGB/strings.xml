@@ -27,5 +27,8 @@
     <string name="ball_extract2">number3</string>
     <string name="ball_extract3">number4</string>
     <string name="ball_extract4">number5</string>
+    <string name="erro_texto">Please type numbers between 1 and 50</string>
+    <string name="falta_numeros">Please fill all the numbers before continue</string>
+    <string name="numeros_diferentes">Please, all the numbers must be different</string>
 
 </resources>

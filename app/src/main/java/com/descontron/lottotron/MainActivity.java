@@ -25,6 +25,16 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    /*
+
+    Alunos do grupo:
+
+    * Antonio Eduardo Kronitzky de Melo
+    * Everton Gomes de Moraes
+    * Renato José Bonardo
+
+     */
     private TextView[] textExtract;
     private Context contexto;
     private ImageView[] ballExtract;
@@ -44,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void validaCorreto(int n,EditText edt, Context ct) {
         if ((n == 0) || (n > 50)) {
-            Toast toast = Toast.makeText(ct, "Digite valores entre 1 e 50", 30);
+            Toast toast = Toast.makeText(ct, R.string.erro_texto, 30);
             toast.show();
             edt.setTextColor(Color.parseColor("#FF0000"));
 
@@ -219,15 +229,15 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                     } else {
-                        Toast toast = Toast.makeText(contexto, "Numeros devem ser diferentes", 30);
+                        Toast toast = Toast.makeText(contexto,R.string.numeros_diferentes, 30);
                         toast.show();
                     }
                 } else {
-                    Toast toast = Toast.makeText(contexto, "Digite valores entre 1 e 50", 30);
+                    Toast toast = Toast.makeText(contexto, R.string.erro_texto, 30);
                     toast.show();
                 }
             } else {
-                Toast toast = Toast.makeText(contexto, "Por favor, preencha todos os campos", 30);
+                Toast toast = Toast.makeText(contexto, R.string.falta_numeros, 30);
                 toast.show();
             }
         }
