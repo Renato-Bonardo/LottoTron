@@ -263,6 +263,11 @@ public class MainActivity extends AppCompatActivity {
             Edt3.setText("");
             Edt4.setText("");
             Edt5.setText("");
+            Edt1.setTextColor(Color.parseColor("#000000"));
+            Edt2.setTextColor(Color.parseColor("#000000"));
+            Edt3.setTextColor(Color.parseColor("#000000"));
+            Edt4.setTextColor(Color.parseColor("#000000"));
+            Edt5.setTextColor(Color.parseColor("#000000"));
             textResult.setVisibility(View.INVISIBLE);
             textPercent.setVisibility(View.INVISIBLE);
             btnSorteio.setText("Sorteio");
