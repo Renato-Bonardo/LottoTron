@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -37,7 +38,9 @@ public class MainActivity extends AppCompatActivity {
     private int acertos;
 
     int numOfNumbers = 5;
-
+    private Handler handler = new Handler();
+    int iterador = 1;
+    int delay = 5000;
 
     public void validaCorreto(int n,EditText edt, Context ct) {
         if ((n == 0) || (n > 50)) {
@@ -136,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-
+            btnSorteio.setEnabled(false);
             List<Integer> nums = new ArrayList<>();
             if ((! Edt1.getText().toString().equals("")) && (! Edt2.getText().toString().equals("")) && (! Edt3.getText().toString().equals("")) && (! Edt4.getText().toString().equals("")) && (! Edt5.getText().toString().equals(""))) {
                 nums.add(Integer.parseInt(Edt1.getText().toString()));
@@ -150,12 +153,8 @@ public class MainActivity extends AppCompatActivity {
                             if ((nums.get(2) != nums.get(3)) && (nums.get(2) != nums.get(4))) {
                                 if ((nums.get(3) != nums.get(4))) {
 
-                                    // POnto onde todas as validações estao ok e o sorteio pode ser feito
-                                    
+                                    // Ponto onde todas as validações estao ok e o sorteio pode ser feito
 
-                                    Toast toast = Toast.makeText(contexto, "Numeros diferentes, ok !", 30);
-                                    Edt5.setTextColor(Color.BLACK);
-                                    toast.show();
 
                                     while(count< numOfNumbers){
                                         numberDraw = rnd.nextInt(50)+1;
@@ -171,13 +170,26 @@ public class MainActivity extends AppCompatActivity {
 
                                     Collections.sort(numbersDraw);
 
-                                    for(int i=0; i < numOfNumbers; i++) {
-                                        audioBolinha.start();
-                                        textExtract[i].setText(numbersDraw.get(i).toString());
-                                        textExtract[i].setVisibility(View.VISIBLE);
-                                        ballExtract[i].setVisibility(View.VISIBLE);
+                                    audioBolinha.start();
+                                    textExtract[0].setText(numbersDraw.get(0).toString());
+                                    textExtract[0].setVisibility(View.VISIBLE);
+                                    ballExtract[0].setVisibility(View.VISIBLE);
 
+                                    for(int i=1; i < numOfNumbers; i++) {
+                                        handler.postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                audioBolinha.start();
+                                                textExtract[iterador].setText(numbersDraw.get(iterador).toString());
+                                                textExtract[iterador].setVisibility(View.VISIBLE);
+                                                ballExtract[iterador].setVisibility(View.VISIBLE);
+                                                iterador++;
+                                            }
+                                        }, delay);
+                                        delay +=5000;
                                     }
+
+
                                     for(int i=0; i < numOfNumbers;i++){
                                         if(nums.contains(numbersDraw.get(i))){
                                             textExtract[i].setTextColor(Color.parseColor("#FF0000"));
@@ -185,17 +197,23 @@ public class MainActivity extends AppCompatActivity {
                                         }
                                     }
 
-                                    textPercent.setText(acertos + " acertos");
-                                    textResult.setVisibility(View.VISIBLE);
-                                    textPercent.setVisibility(View.VISIBLE);
+                                    handler.postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            textPercent.setText(acertos + " acertos");
+                                            textResult.setVisibility(View.VISIBLE);
+                                            textPercent.setVisibility(View.VISIBLE);
+                                            if(acertos == numOfNumbers){
+                                                showVencedor();
+                                                audioAplausos.start();
+
+                                            }
+                                            btnSorteio.setEnabled(true);
+                                        }
+                                    }, 20000);
 
                                     btnSorteio.setText("Reset");
                                     btnSorteio.setOnClickListener(resetSorteio);
-                                    if(acertos == numOfNumbers){
-                                        showVencedor();
-                                        audioAplausos.start();
-
-                                    }
                                 }
                             }
                         }
@@ -221,12 +239,14 @@ public class MainActivity extends AppCompatActivity {
             for(int i=0; i < numOfNumbers; i++) {
 
                 textExtract[i].setVisibility(View.INVISIBLE);
-                textExtract[i].setTextColor(Color.parseColor("#56000000"));
+                textExtract[i].setTextColor(Color.parseColor("#000000"));
                 ballExtract[i].setVisibility(View.INVISIBLE);
             }
 
             count = 0;
             acertos = 0;
+            iterador = 1;
+            delay = 5000;
             numbersDraw.clear();
             Edt1.setText("");
             Edt2.setText("");
@@ -260,9 +280,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-
     }
 }
 
